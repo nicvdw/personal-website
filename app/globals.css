@@ -15,6 +15,45 @@
  }
 }
 
+/* Force dark background everywhere */
+html,
+body {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Prevent white flash on mobile */
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Better mobile scrolling */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Fix mobile viewport height */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Prevent layout shift */
+img {
+  max-width: 100%;
+}
+
+/* Mobile-friendly touch targets */
+@media (max-width: 768px) {
+  button,
+  a {
+    min-height: 44px;
+  }
+}
+
 
 body {
  background: var(--background);

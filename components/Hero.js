@@ -1,7 +1,6 @@
 'use client';
 
 import SocialLinks from './SocialLinks';
-import { ArrowUp } from 'lucide-react';
 import TypingAnimation from './TypingAnimation';
 
 export default function Hero() {
@@ -12,39 +11,43 @@ export default function Hero() {
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+    <section id="home" className="min-h-screen flex items-center pt-20 px-6 lg:px-20">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
+          
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
             <div>
               <p className="text-sm text-gray-400 uppercase tracking-widest mb-4">
                 WELCOME TO MY PORTFOLIO
               </p>
-                <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                Hi, I&apos;m <span className="text-primary">Nicolaas</span> <br />
-                <span className="text-primary"> van der Walt</span>
-              <br />
-                <TypingAnimation 
-                  titles={[
-                  'a Finance Student.',
-                  'a Quant Trader.',
-                  'a Computing Major.',
-                  'a Strategy Coder.',
-                  'a Market Analyst.',
-                ]} 
-              />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Hi, I&apos;m <span className="text-primary">Nicolaas</span>
+                <br />
+                <span className="text-primary">van der Walt</span>
+                <br />
+                <span className="block mt-2">
+                  <TypingAnimation 
+                    titles={[
+                      'a Finance Student.',
+                      'a Quant Trader.',
+                      'a Computing Major.',
+                      'a Strategy Coder.',
+                      'a Market Analyst.',
+                    ]} 
+                  />
+                </span>
               </h1>
 
-              <p className="text-gray-400 mt-6 max-w-lg leading-relaxed">
-                I’m a student exploring financial markets through hands-on trading and strategy development.
+              <p className="text-gray-400 mt-6 max-w-lg leading-relaxed text-sm md:text-base">
+                I&apos;m a student exploring financial markets through hands-on trading and strategy development.
                 I create and test strategies using technical indicators, network-based models, and market data analysis,
                 focusing on systematic approaches that balance risk and opportunity.
               </p>
             </div>
 
             {/* Bottom Section */}
-            <div className="flex flex-col md:flex-row gap-8 pt-2">
+            <div className="flex flex-col md:flex-row gap-6 lg:gap-8 pt-2">
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-widest mb-3">
                   FIND ME
@@ -53,9 +56,9 @@ export default function Hero() {
               </div>
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-widest mb-3">
-                  Random
+                  EXPLORE
                 </p>
-                <div className="flex gap-6">
+                <div className="flex gap-4">
                   {skills.map((skill, index) => (
                     <div
                       key={index}
@@ -70,13 +73,12 @@ export default function Hero() {
           </div>
 
           {/* Right Content - Image */}
-          <div className="relative">
+          <div className="relative order-1 lg:order-2">
             <div className="relative w-full max-w-md mx-auto">
-              <div className="aspect-square rounded-lg overflow-hidden bg-linear-to-br from-gray-800 to-gray-900">
-                {/* Replace with your actual image */}
+              <div className="aspect-square rounded-lg overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900">
                 <img
                   src="/avatar.png"
-                  alt="Jone Lee"
+                  alt="Nicolaas van der Walt"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.target.style.display = 'none';
@@ -85,8 +87,8 @@ export default function Hero() {
                 />
               </div>
             </div>
-
           </div>
+
         </div>
       </div>
     </section>
